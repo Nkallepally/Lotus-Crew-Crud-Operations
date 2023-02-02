@@ -1,9 +1,10 @@
-const express=require("express")
-const inventory_model = ("../Models/inventory_model");
-// import express from "express";
-// import inventory_model from "../Models/inventory_model"
+import express from "express";
+import inventory_model from "../Models/inventory_model"
+// const express=require("express")
+// const inventory_model = ("../Models/inventory_model");
 
 
+ 
 const router = express.Router();
 
 router.post("/post", (req, res) => {
@@ -42,4 +43,5 @@ router.delete("/inventorydelete", (req, res) => {
 })
 
 
-module.exports = router;
+// module.exports = router;
+export default router;

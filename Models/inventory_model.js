@@ -1,5 +1,5 @@
-const mongoose=require("mongoose")
-// import mongoose from "mongoose";
+// const mongoose=require("mongoose")
+import mongoose from "mongoose";
 
 const inventorySchema = new mongoose.Schema({
     item_name: String,
@@ -9,4 +9,5 @@ const inventorySchema = new mongoose.Schema({
 
 const inventory_model = mongoose.model("inventories", inventorySchema);
 
-module.exports = inventory_model;
+// module.exports = inventory_model;
+export default inventory_model;
