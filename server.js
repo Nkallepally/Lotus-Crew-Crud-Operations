@@ -24,30 +24,15 @@ console.log("App listening on port " + process.env.PORT);
 
 
 
+
+
+
+
+
 // for my reference will delete later
 // installed
 // npm i dotenv
 // npm i http-status
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // for my reference will delete later
 // command to run the program
 // node --experimental-specifier-resolution=node server.js
@@ -56,3 +41,23 @@ console.log("App listening on port " + process.env.PORT);
 // git remote add origin https://github.com/Nkallepally/Lotus-Crew-Crud-Operations.git
 // git branch -M main
 // git push -u origin main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
