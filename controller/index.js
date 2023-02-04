@@ -8,10 +8,7 @@ export const reqHandlingFunc = (req, res) => {
 export const createInventoryDetails = async (req, res) => {
     const { item_name, item_type, available_quantity } = req.body;
     const productDataRes = await createInventoryService(item_name, item_type, available_quantity)
-
     res.status(200).send({ ProductData: productDataRes });
-
-
 }
 
 
