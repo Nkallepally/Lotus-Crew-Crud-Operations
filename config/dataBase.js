@@ -1,7 +1,11 @@
 import mongoose from 'mongoose';
-// const mongoose=require("mongoose")
+import dotenv from 'dotenv';
+
+dotenv.config() 
+
+
 mongoose.set('strictQuery', true);
-mongoose.connect("mongodb://localhost:27017/crudOperations", (data)=>{
+mongoose.connect(process.env.MONGOOSE_STRING, (data)=>{
     console.log("Database is connected succesfully")
 }, (err)=>{
     console.log(err);

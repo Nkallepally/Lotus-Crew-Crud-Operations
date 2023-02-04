@@ -1,35 +1,53 @@
 import express from "express";
-// const express=require("express")
 const app = express();
-
-
-const port = process.env.PORT || 3001;
-
-// const inventoryController = require("./Routes/inventory")
-// const db=require('./dataBase')
-import db from "./dataBase.js"
+import dotenv from 'dotenv';
+dotenv.config() 
+import db from "./config/dataBase.js"
 import inventoryController from "./Routes/inventory.js"
+import { reqHandlingFunc } from "./controller/index.js";
 
 
-
-// for postman purpose
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-  
-// for checking whether our backend server is working or not
-app.get("/",(req,res)=>{
-  
-    res.status(200).send("Inventory")
-})
 
 
+app.get("/", reqHandlingFunc);
 app.use("/inventory", inventoryController)
 
-// app.listen should be at the end,app.use should be before app.listen
-app.listen(port, (req, res) => {
-    console.log( `server started at ${port}`);
-});
+app.listen(process.env.PORT);
+		console.log("App listening on port " + process.env.PORT);
+
+
+
+
+
+
+// for my reference will delete later
+// installed
+// npm i dotenv
+// npm i http-status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for my reference will delete later
 // command to run the program 
 // node --experimental-specifier-resolution=node server.js
 
