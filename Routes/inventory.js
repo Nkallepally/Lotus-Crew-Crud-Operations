@@ -5,8 +5,7 @@ const router = express.Router();
 router.post("/post", createInventoryDetails);
 router.get("/inventoryget",getInventoryDetails);
 router.put("/inventoryupdate",putInventoryDetails);
-router.delete("/inventorydelete",deleteInventoryDetails)
-
+router.delete("/inventorydelete",deleteInventoryDetails);
 
 export default router;
 
