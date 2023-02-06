@@ -10,9 +10,9 @@ export const createInventoryService = async (item_name, item_type, available_qua
 }
 
 
-export const getInventoryService = async (item_name, item_type, available_quantity) => {
+export const getInventoryService = async () => {
     try {
-        const inventoryDetails = await inventory_model.find(item_name, item_type, available_quantity);
+        const inventoryDetails = await inventory_model.find();
         return inventoryDetails
     } catch (err) {
         console.log(err)
@@ -31,8 +31,8 @@ export const putInventoryService = async (item_name, available_quantity) => {
 
 export const deleteInventoryService = async (item_name, available_quantity) => {
     try {
-        const inventoryDetail = await inventory_model.deleteOne(item_name, available_quantity);
-        return inventoryDetail
+        const inventoryDetails = await inventory_model.deleteOne(item_name, available_quantity);
+        return inventoryDetails
     } catch (err) {
         console.log(err)
     }

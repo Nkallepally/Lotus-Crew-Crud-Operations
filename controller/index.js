@@ -21,12 +21,12 @@ export const getInventoryDetails = async (req, res) => {
 export const putInventoryDetails = async (req, res) => {
     const { item_name, available_quantity } = req.body;
     const inventorydetailsRes = await putInventoryService(item_name, available_quantity);
-    res.status(200).send({ InventoryData: inventorydetailsRes })
+    res.status(200).send("Updated Successfully")
 }
 export const deleteInventoryDetails = async (req, res) => {
     const { item_name, available_quantity } = req.body;
     const inventorydetailsRes = await deleteInventoryService(item_name, available_quantity);
-    res.status(200).send({ InventoryData: inventorydetailsRes })
+    res.status(200).send("Deleted Successfully")
 }
 
 
