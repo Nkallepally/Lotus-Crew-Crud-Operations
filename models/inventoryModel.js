@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const inventorySchema = new mongoose.Schema({
     item_name: String,
-    inventory_type: String,
+    item_type: String,
     available_quantity: Number
 });
 

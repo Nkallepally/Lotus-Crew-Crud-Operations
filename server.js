@@ -2,8 +2,8 @@ import express from "express";
 const app = express();
 import dotenv from 'dotenv';
 dotenv.config()
-import db from "./config/dataBase.js"
-import inventoryController from "./Routes/inventory.js"
+import db from "./config/database.js"
+import inventoryController from "./routes/inventory.js"
 
 import { reqHandlingFunc } from "./controller/index.js";
 
@@ -35,7 +35,9 @@ console.log("App listening on port " + process.env.PORT);
 // npm i http-status
 // for my reference will delete later
 // command to run the program
-// node --experimental-specifier-resolution=node server.js
+// 
+
+
 
 // commands for pushing the code into git hub for pushing
 // git remote add origin https://github.com/Nkallepally/Lotus-Crew-Crud-Operations.git

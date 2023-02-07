@@ -1,4 +1,5 @@
-import inventory_model from "../Models/inventory_model.js"
+import inventory_model from "../models/inventoryModel.js"
+
 
 export const createInventoryService = async (item_name, item_type, available_quantity) => {
     try {
